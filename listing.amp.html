@@ -1,0 +1,86 @@
+<!doctype HTML>
+<html ⚡>
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>AMP Lovethesign</title>
+
+    <!-- need to point to original resource -->
+    <link rel="canonical" href="#">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript>
+        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+
+    <!-- custom AMP CSS style -->
+    <style amp-custom>
+        h1 {
+            color: red;
+            font-family: sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            flex: 0 0 47%;
+            padding: 1.5%;
+        }
+
+        .center-align {
+            justify-content: center;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Lovethesign Listing example</h1>
+
+    <!-- <amp-list width="300" height="200" layout="responsive" src="https://ampbyexample.com/json/examples.json" class="m1">
+        <template type="amp-mustache" id="amp-template-id">
+            <div>
+                <a href="{{url}}">{{title}}</a>
+            </div>
+        </template>
+    </amp-list> -->
+
+    <amp-list width="auto" height="600" layout="responsive" src="https://ampbyexample.com/samples_templates/slow-json-with-items/?">
+        <div placeholder>
+            <ul class="results">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <template type="amp-mustache" class="flex">
+            <div class="flex-item flex-wrap">
+                <amp-img width="140" height="140" alt="{{name}}" src="{{img}}"></amp-img>
+                <p class="name">{{name}}</p>
+                <p class="star">{{{stars}}}</p>
+                <p class="price">${{price}}</p>
+            </div>
+        </template>
+
+    </amp-list>
+
+
+</body>
+
+</html>
