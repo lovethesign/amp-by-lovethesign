@@ -85,7 +85,6 @@
 
     <!-- custom AMP CSS style -->
     <style amp-custom>
-        
         :root {
             --color-lts-primary: #dd4a5f;
             --cta-1: #3466a8;
@@ -120,7 +119,8 @@
             font-weight: 400;
         }
 
-        ul,li {
+        ul,
+        li {
             list-style-type: none;
             padding: 0;
         }
@@ -187,7 +187,7 @@
         }
 
         .margin-top-1 {
-            margin-top:.25rem;
+            margin-top: .25rem;
         }
 
         .margin-top-2 {
@@ -212,6 +212,11 @@
 
         .margin-bottom-4 {
             margin-bottom: 1.5rem;
+        }
+
+        .margin-lr-2 {
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
 
         /* CARD STYLE */
@@ -287,6 +292,18 @@
             background: var(--cta-1-hover);
         }
 
+        /* FOOTER */
+
+        .footer-extra-title {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-lts-primary);
+        }
+
+        .footer-extra-text {
+            text-align: center;
+            font-size: .8rem;
+        }
     </style>
 
 
@@ -351,17 +368,43 @@
     </section>
 
     <footer class="flex center-align flex-dir-col bg-grey-5 text-white">
-            <nav class="margin-auto">
-                <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                    <li>Link 3</li>
-                    <li>Link 4</li>
-                </ul>
-            </nav>
-            <p class="margin-auto">FAQ</p>
-            <p class="margin-auto">Spedizioni</p>
-            <small class="margin-auto">© 2018 Lovethesign S.p.a.</small>
+
+        <!-- EXTRA SECTION -->
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
+        </div>
+
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
+        </div>
+
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
+        </div>
+
+        <nav class="margin-auto">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+            </ul>
+        </nav>
+        <p class="margin-auto">FAQ</p>
+        <p class="margin-auto">Spedizioni</p>
+        <small class="margin-auto">© 2018 Lovethesign S.p.a.</small>
     </footer>
 
 </body>
