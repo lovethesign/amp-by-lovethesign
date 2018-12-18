@@ -143,6 +143,10 @@
             display: flex;
         }
 
+        .flex-grow-0 {
+            flex-grow: 0;
+        }
+
         .flex-dir-row {
             flex-direction: row;
         }
@@ -169,6 +173,14 @@
             margin: auto;
         }
 
+        .margin-top-1 {
+            margin-top:.25rem;
+        }
+
+        .margin-top-2 {
+            margin-top: .5rem;
+        }
+
         /* CARD STYLE */
 
         .item-brand {
@@ -180,6 +192,8 @@
         .item-title {
             margin-top: .25rem;
             margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .price-original,
@@ -198,7 +212,32 @@
         }
 
         .price-discount {
-            color: red;
+            color: rgb(180, 0, 0);
+            font-weight: bolder;
+        }
+
+        .label-lovepromo,
+        .label-fast-shipping,
+        .label-out-of-stock {
+            padding: .25rem;
+            font-size: .75rem;
+            margin-top: .25rem;
+            border-radius: 2px;
+        }
+
+        .label-lovepromo {
+            color: var(--color-lts-primary);
+            border: 1px solid var(--color-lts-primary);
+        }
+
+        .label-fast-shipping {
+            color: royalblue;
+            border: 1px solid royalblue;
+        }
+
+        .label-out-of-stock {
+            color: black;
+            border: 1px solid black;
         }
 
     </style>
@@ -221,11 +260,15 @@
         <article class="flex-item-list-2">
             <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
             <span class="item-brand">Brand Name</span>
-            <h3 class="item-title">Article title</h3>
+            <h4 class="item-title">Article title</h4>
             <p class="price-final">€ 299.90</p>
             <span class="price-original">€ 600.00</span>
             <span class="price-discount">-50%</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae repudiandae asperiores.</p>
+            <section class="flex flex-wrap flex-dir-col center-align margin-top-2">
+                <span class="label-lovepromo margin-auto flex-grow-0">LOVEPROMO</span>
+                <span class="label-fast-shipping margin-auto flex-grow-0">PRONTA CONSEGNA</span>
+                <span class="label-out-of-stock margin-auto flex-grow-0">TERMINATO</span>
+            </section>
         </article>
 
 
