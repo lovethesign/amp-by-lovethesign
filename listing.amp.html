@@ -7,79 +7,405 @@
     <title>AMP Lovethesign</title>
 
     <!-- need to point to original resource -->
-    <link rel="canonical" href="#">
+    <link rel="canonical" href="listing.amp.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <!-- <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
 
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript>
-        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
     </noscript>
 
     <!-- custom AMP CSS style -->
     <style amp-custom>
-        h1 {
-            color: red;
+        :root {
+            --color-lts-primary: #dd4a5f;
+            --cta-1: #3466a8;
+            --cta-1-hover: #477ec7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        li,
+        span {
             font-family: sans-serif;
         }
 
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a,
+        a:hover,
+        a:active,
+        a:visited {
+            text-decoration: none;
+        }
+
+        /* COLORS & BACKGROUNDS */
+
+        .bg-grey-5 {
+            background: rgb(34, 34, 34)
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        #logo-header {
+            margin: 1rem;
+        }
+
+        /* FLEX HELPERS */
+
         .flex {
             display: flex;
+        }
+
+        .flex-grow-0 {
+            flex-grow: 0;
+        }
+
+        .flex-dir-row {
+            flex-direction: row;
+        }
+
+        .flex-dir-col {
+            flex-direction: column;
         }
 
         .flex-wrap {
             flex-wrap: wrap;
         }
 
-        .flex-item {
+        .flex-item-list-2 {
             flex: 0 0 47%;
             padding: 1.5%;
         }
 
         .center-align {
             justify-content: center;
+            margin: auto;
         }
 
+        .vertical-align {
+            align-items: center;
+        }
+
+        .margin-auto {
+            margin: auto;
+        }
+
+        .margin-top-1 {
+            margin-top: .25rem;
+        }
+
+        .margin-top-2 {
+            margin-top: .5rem;
+        }
+
+        .margin-top-3 {
+            margin-top: 1rem;
+        }
+
+        .margin-top-4 {
+            margin-top: 1.5rem;
+        }
+
+        .margin-bottom-2 {
+            margin-bottom: .5rem;
+        }
+
+        .margin-bottom-3 {
+            margin-bottom: 1rem;
+        }
+
+        .margin-bottom-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .margin-lr-2 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        /* CARD STYLE */
+
+        .item-brand {
+            font-size: .75rem;
+            font-family: serif;
+            font-style: italic;
+        }
+
+        .item-title {
+            margin-top: .25rem;
+            margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price-original,
+        .price-discount {
+            font-size: .875rem;
+        }
+
+        .price-final {
+            margin-top: .5rem;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+        }
+
+        .price-discount {
+            color: rgb(180, 0, 0);
+            font-weight: bolder;
+        }
+
+        .label-lovepromo,
+        .label-fast-shipping,
+        .label-out-of-stock {
+            padding: .25rem;
+            font-size: .75rem;
+            margin-top: .25rem;
+            border-radius: 2px;
+        }
+
+        .label-lovepromo {
+            color: var(--color-lts-primary);
+            border: 1px solid var(--color-lts-primary);
+        }
+
+        .label-fast-shipping {
+            color: royalblue;
+            border: 1px solid royalblue;
+        }
+
+        .label-out-of-stock {
+            color: black;
+            border: 1px solid black;
+        }
+
+        /* CTA BUTTON */
+
+        .cta-listing {
+            color: white;
+            padding: .8rem 1.4rem;
+            background: var(--cta-1);
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .cta-listing:hover {
+            background: var(--cta-1-hover);
+        }
+
+        /* FOOTER */
+
+        .footer-extra-title {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-lts-primary);
+        }
+
+        .footer-extra-text {
+            text-align: center;
+            font-size: .8rem;
+        }
     </style>
 
 
 </head>
 
 <body>
-    <h1>Lovethesign Listing example</h1>
+    <div id="logo-header">
+        <amp-img height="30" width="auto" layout="fixed-height" src="https://www.lovethesign.com/bundles/teamnovateksyliusweb/images/logo-black.svg"></amp-img>
+    </div>
+    <amp-img height="150" width="300" layout="responsive" src="https://s3-eu-west-1.amazonaws.com/lovethecdn2/categories/7e3d6f72f21c4c079b1b87eac6096a0e.jpeg"></amp-img>
+    <section class="flex center-align">
+        <h1>Illuminazione</h1>
+    </section>
 
-    <!-- <amp-list width="300" height="200" layout="responsive" src="https://ampbyexample.com/json/examples.json" class="m1">
-        <template type="amp-mustache" id="amp-template-id">
-            <div>
-                <a href="{{url}}">{{title}}</a>
-            </div>
-        </template>
-    </amp-list> -->
+    <div class="flex flex-wrap">
 
-    <amp-list width="auto" height="600" layout="responsive" src="https://ampbyexample.com/samples_templates/slow-json-with-items/?">
-        <div placeholder>
-            <ul class="results">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+
+        <article class="flex-item-list-2">
+            <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
+            <span class="item-brand">Brand Name</span>
+            <h4 class="item-title">Article title</h4>
+            <p class="price-final">€ 299.90</p>
+            <span class="price-original">€ 600.00</span>
+            <span class="price-discount">-50%</span>
+            <section class="flex flex-wrap flex-dir-col center-align margin-top-2">
+                <span class="label-lovepromo margin-auto flex-grow-0">LOVEPROMO</span>
+                <span class="label-fast-shipping margin-auto flex-grow-0">PRONTA CONSEGNA</span>
+                <span class="label-out-of-stock margin-auto flex-grow-0">TERMINATO</span>
+            </section>
+        </article>
+
+
+        <article class="flex-item-list-2">
+            <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
+            <h3>Article title</h3>
+            <p>€ 299.90</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae repudiandae asperiores.</p>
+        </article>
+        <article class="flex-item-list-2">
+            <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
+            <h3>Article title</h3>
+            <p>€ 299.90</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae repudiandae asperiores.</p>
+        </article>
+        <article class="flex-item-list-2">
+            <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
+            <h3>Article title</h3>
+            <p>€ 299.90</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae repudiandae asperiores.</p>
+        </article>
+        <article class="flex-item-list-2">
+            <amp-img height="150" width="150" layout="responsive" src="https://via.placeholder.com/150x150"></amp-img>
+            <h3>Article title</h3>
+            <p>€ 299.90</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae repudiandae asperiores.</p>
+        </article>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="flex center-align margin-top-4 margin-bottom-4 vertical-align">
+        <a href="#" class="cta-listing">SEE ALL PRODUCTS</a>
+    </section>
+
+    <footer class="flex center-align flex-dir-col bg-grey-5 text-white">
+
+        <!-- EXTRA SECTION -->
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
         </div>
-        <template type="amp-mustache" class="flex">
-            <div class="flex-item flex-wrap">
-                <amp-img width="140" height="140" alt="{{name}}" src="{{img}}"></amp-img>
-                <p class="name">{{name}}</p>
-                <p class="star">{{{stars}}}</p>
-                <p class="price">${{price}}</p>
-            </div>
-        </template>
 
-    </amp-list>
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
+        </div>
 
+        <div class="footer-extra flex flex-wrap flex-dir-col center-align margin-top-3 margin-lr-2">
+            <span class="margin-auto footer-extra-title">Section title</span>
+            <p class="footer-extra-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius temporibus nisi
+                accusantium quae dolores
+                eum deleniti molestiae provident veritatis. Sint optio quas iusto unde aliquid, voluptatem placeat nisi
+                accusamus est.</p>
+        </div>
+
+        <nav class="margin-auto">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+            </ul>
+        </nav>
+        <p class="margin-auto">FAQ</p>
+        <p class="margin-auto">Spedizioni</p>
+        <small class="margin-auto">© 2018 Lovethesign S.p.a.</small>
+    </footer>
 
 </body>
 
